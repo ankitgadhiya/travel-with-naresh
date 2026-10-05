@@ -2,6 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import sharp from "sharp";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
@@ -43,9 +44,20 @@ async function uploadMedia(formData: FormData, userId: string, supabase: NonNull
   const allowed = ["image/jpeg", "image/png", "image/webp", "video/mp4", "video/quicktime"];
   if (!allowed.includes(file.type)) throw new Error("Use a JPG, PNG, WebP, MP4 or MOV file.");
   if (file.size > 25 * 1024 * 1024) throw new Error("Media must be 25 MB or smaller.");
-  const extension = file.name.split(".").pop()?.replace(/[^a-z0-9]/gi, "").toLowerCase() || "bin";
+  let extension = file.name.split(".").pop()?.replace(/[^a-z0-9]/gi, "").toLowerCase() || "bin";
+  let contentType = file.type;
+  let uploadBody: File | Buffer = file;
+  if (file.type.startsWith("image/")) {
+    uploadBody = await sharp(Buffer.from(await file.arrayBuffer()))
+      .rotate()
+      .resize({ width: 2000, height: 2000, fit: "inside", withoutEnlargement: true })
+      .webp({ quality: 82 })
+      .toBuffer();
+    extension = "webp";
+    contentType = "image/webp";
+  }
   const path = `${userId}/${crypto.randomUUID()}.${extension}`;
-  const { error } = await supabase.storage.from("media").upload(path, file, { contentType: file.type, upsert: false });
+  const { error } = await supabase.storage.from("media").upload(path, uploadBody, { contentType, upsert: false });
   if (error) throw new Error(`Upload failed: ${error.message}`);
   return supabase.storage.from("media").getPublicUrl(path).data.publicUrl;
 }
