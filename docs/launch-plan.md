@@ -1,0 +1,97 @@
+# Travel with Naresh Gadhiya — Launch Plan
+
+## 1. Final sitemap
+
+- Home
+- About Naresh
+- Visa Consultancy
+- Custom Travel & Tours
+- Destinations
+  - Europe
+  - USA & Canada
+  - United Kingdom
+  - Australia & New Zealand
+  - Middle East
+  - Far East & Asia
+  - South Africa
+  - Other International Destinations
+- Travel Stories / Gallery
+- Customer Experiences
+- Why Travel with Naresh
+- FAQ
+- Contact / Start Planning
+- Privacy Policy
+- Terms & Visa Disclaimer
+- Password-protected Admin
+
+## 2. Homepage wireframe
+
+1. Sticky trust-led navigation and WhatsApp action
+2. Portrait-led hero: identity, 36+ years, positioning, two primary calls to action
+3. Equal-weight service pillars: visa consultancy and customized travel
+4. Experience-in-numbers strip using only verified claims
+5. Personal story and portrait
+6. Europe specialist feature
+7. Destination experience grid
+8. Why Travel with Naresh benefits
+9. Featured CMS travel stories
+10. Featured CMS customer experiences
+11. Smart WhatsApp enquiry
+12. Credibility/contact footer
+
+## 3. Brand/design system
+
+- Deep navy `#071A33`: trust, navigation and premium surfaces
+- Premium gold `#C5963C`: restrained accents and wayfinding
+- Warm ivory `#FBF8F1`: primary background
+- Cormorant Garamond: editorial display typography
+- Manrope: highly legible interface/body typography
+- Photography: Naresh's real portrait first; destination imagery only when owned/licensed
+- Interaction: clear focus states, reduced-motion support, 44px+ touch targets
+
+## 4. Final homepage copy
+
+The homepage leads with “The World, Planned with Experience”, identifies Naresh personally, states 36+ years of travel and tourism expertise, and gives equal prominence to “End-to-End Visa Consultancy” and “Customized Travel & Tour Packages”. Europe is presented as a specialist destination. Previous employers appear only as previous professional experience; no present affiliation or endorsement is implied.
+
+## 5. Mobile homepage layout
+
+Single-column content order preserves the five-second message: identity, experience, two services, Europe specialization, and WhatsApp action. The primary WhatsApp control remains visible. Navigation collapses into a large-touch menu; enquiry fields and administrator controls stack vertically.
+
+## 6. CMS/admin architecture
+
+Supabase Auth restricts `/admin` to the approved administrator account. The dashboard exposes large mobile actions for stories, photos/video links, testimonials, settings, timeline entries and proof points. Row-level security denies public writes and limits administrative writes to users listed in `admin_users`.
+
+## 7. Media-upload architecture
+
+Phone uploads go directly to a Supabase Storage `media` bucket after authentication. Accepted types and size limits are checked in both the interface and bucket policy. Images render through responsive browser sizing and Next.js optimization. Videos should default to hosted links for low cost; direct short-video uploads are supported within configured limits and never autoplay.
+
+## 8. Database/content model
+
+- `admin_users`: authorized profile IDs
+- `site_settings`: editable profile/contact/service content
+- `travel_stories`: destination, country, year, story, media, featured/published state
+- `testimonials`: consent-controlled written/video feedback and featured/published state
+- `destinations`: editable destination pages
+- `timeline_entries`: ordered career story
+- `proof_points`: value, label, evidence-confirmed and published controls
+
+## 9. WhatsApp enquiry flow
+
+The form branches after “How can I help you?”. Visa enquiries collect country, type, applicants, dates and refusal history. Travel enquiries collect destination, departure city, dates, party size, budget and travel style. Submission composes a readable message and opens WhatsApp; no form data is retained. Email remains available.
+
+## 10. Recommended deployment architecture
+
+- GitHub: source control in a dedicated repository beside the MCC project
+- Vercel: Next.js deployment, CDN, HTTPS, preview deployments and custom domain
+- Supabase: PostgreSQL, Auth and Storage
+- Cloudflare Registrar or an Indian INR-billing registrar: domain and DNS
+- Nightly Supabase exports once content becomes business-critical
+
+## 11. Estimated recurring operating costs
+
+| Stage | Hosting | CMS | Domain | Expected total |
+|---|---:|---:|---:|---:|
+| Initial launch | Vercel Hobby: $0 | Supabase Free: $0 | Registrar price, typically ₹900–₹1,500/year for `.com` | Domain only |
+| Reliable business tier | Vercel Pro: $20/month if commercial limits require it | Supabase Pro: $25/month | Domain renewal | About $45/month + domain |
+
+Supabase Free may pause after one week without activity. Core public content is statically available, but the business tier is recommended once frequent CMS use, dependable media availability and backups become essential. Prices must be rechecked before purchase.

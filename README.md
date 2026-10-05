@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Travel with Naresh Gadhiya
 
-## Getting Started
+Production-oriented website and simple mobile CMS for Naresh Gadhiya's independent international travel and visa consultancy.
 
-First, run the development server:
+## Architecture
 
-```bash
+- Next.js App Router, React, TypeScript and Tailwind CSS
+- Supabase Auth, PostgreSQL and Storage
+- Vercel deployment with custom domain
+- WhatsApp-first enquiry conversion
+
+The detailed sitemap, wireframe, design system, content model, deployment plan and cost model are in [`docs/launch-plan.md`](docs/launch-plan.md).
+
+## Local development
+
+```powershell
+Copy-Item .env.example .env.local
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`. The public website works without Supabase. `/admin` displays setup instructions until the environment variables are configured.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Configure the CMS
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Create a Supabase project.
+2. Run `supabase/schema.sql` in the Supabase SQL Editor.
+3. Create Naresh's administrator account in **Authentication → Users**.
+4. Replace `ADMIN_EMAIL_HERE` in the final SQL comment and run that one authorization statement.
+5. Copy the project URL and public anon key into `.env.local` and the Vercel environment settings.
+6. Keep email self-registration disabled. Only the explicitly authorized user can write content.
 
-## Learn More
+Direct media uploads accept JPG, PNG, WebP, MP4 and MOV files up to 25 MB. Longer videos should use YouTube or another hosted video URL.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Create a private GitHub repository and push this project.
+2. Import it into Vercel.
+3. Configure the three variables from `.env.example`.
+4. Set `NEXT_PUBLIC_SITE_URL` to the final HTTPS domain.
+5. Attach the domain in Vercel, then apply the DNS records at the registrar.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Before launch, replace the proposed domain if a different name is purchased, add genuine travel media, confirm every career detail with Naresh, and publish testimonials only with customer consent.
