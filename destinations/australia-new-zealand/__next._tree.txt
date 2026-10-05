@@ -1,0 +1,7 @@
+:HL["/travel-with-naresh/_next/static/chunks/03vk6__8e0m22.css","style"]
+:HL["/travel-with-naresh/_next/static/media/01e4147cff8141ee-s.p.3huc2loe0ie8a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/travel-with-naresh/_next/static/media/a343f882a40d2cc9-s.p.1sj6eobyi31rd.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+3:[["children",{"s":"__PAGE__","h":160}]]
+2:[["children",{"s":{"n":"slug","t":"d","k":"australia-new-zealand","s":[]},"h":96,"c":"$Q3"}]]
+1:[["children",{"s":"destinations","h":64,"c":"$Q2"}]]
+0:{"b":"wJqPE_FIh2r0o7oC9tcmc","t":{"t":{"s":"","h":16,"c":"$Q1"}}}

@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://ankitgadhiya.github.io/travel-with-naresh/sitemap.xml

@@ -1,0 +1,27 @@
+2:"$Sreact.fragment"
+3:"/travel-with-naresh/_next/static/chunks/19r28e3p2h6d_.js"
+4:I[39756,["$3"],"default"]
+5:I[37457,["$3"],"default"]
+a:"/travel-with-naresh/_next/static/chunks/44a2i90oqfekm.js"
+b:I[5014,["$3","$a"],"default"]
+c:I[97367,["$3"],"OutletBoundary"]
+d:"$Sreact.suspense"
+10:"ViewportBoundary"
+11:I[97367,["$3"],"$10"]
+12:"MetadataBoundary"
+13:I[97367,["$3"],"$12"]
+14:I[27201,["$3"],"IconMark"]
+7:X
+7:C
+8:X
+9:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[[["$","section",null,{"className":"page-hero","children":["$","div",null,{"className":"shell narrow","children":[["$","p",null,{"className":"eyebrow gold","children":"Around the world with Naresh"}],["$","h1",null,{"children":"Travel Stories"}],["$","p",null,{"className":"page-intro","children":"A growing collection of original photographs, destination memories, videos and lessons from journeys around the world."}]]}]}],["$","section",null,{"className":"section","children":["$","div",null,{"className":"shell empty-state","children":[["$","$Lb",null,{"icon":{"name":"camera","size":24,"node":[["path",{"d":"M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z","key":"18u6gg"}],["circle",{"cx":"12","cy":"13","r":"3","key":"1vg3eu"}]]},"size":38}],["$","$Lb",null,{"icon":{"name":"video","size":24,"node":[["path",{"d":"m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5","key":"ftymec"}],["rect",{"x":"2","y":"6","width":"14","height":"12","rx":"2","key":"158x01"}]]},"size":38}],["$","h2",null,{"children":"Genuine stories are being prepared."}],["$","p",null,{"children":"This gallery intentionally remains empty until Naresh uploads his own travel media and captions through the private dashboard. No stock memories or invented stories will be presented as personal experience."}]]}]}]],[["$","script","script-0",{"src":"/travel-with-naresh/_next/static/chunks/44a2i90oqfekm.js","async":true}]],["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]]}],"p":"$@f","v":null,"s":"$8"}}]]
+1:[["children",{"s":"travel-stories","h":64,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@6","v":"$7","s":"$8"},"c":"$Q9"}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L11",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#071a33"}]]}],["$","$L13",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$d",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Travel Stories & Gallery | Travel with Naresh"}],["$","meta","1",{"name":"description","content":"Original destination photographs, videos and travel memories from Naresh Gadhiya."}],["$","meta","2",{"name":"keywords","content":"Travel Consultant Navi Mumbai,Visa Consultancy Navi Mumbai,Europe Travel Specialist Mumbai,Customized International Tour Packages Mumbai,Naresh Gadhiya Travel"}],["$","link","3",{"rel":"canonical","href":"https://ankitgadhiya.github.io/travel-with-naresh/travel-stories"}],["$","meta","4",{"property":"og:title","content":"Travel with Naresh Gadhiya"}],["$","meta","5",{"property":"og:description","content":"International Travel & Visa Consultancy · 36+ Years of Travel & Tourism Expertise"}],["$","meta","6",{"property":"og:url","content":"https://ankitgadhiya.github.io/travel-with-naresh"}],["$","meta","7",{"property":"og:site_name","content":"Travel with Naresh Gadhiya"}],["$","meta","8",{"property":"og:locale","content":"en_IN"}],["$","meta","9",{"property":"og:image","content":"https://ankitgadhiya.github.io/travel-with-naresh/images/travel-with-naresh-social.jpg"}],["$","meta","10",{"property":"og:image:width","content":"1200"}],["$","meta","11",{"property":"og:image:height","content":"671"}],["$","meta","12",{"property":"og:image:alt","content":"Travel with Naresh Gadhiya — International Travel & Visa Consultancy"}],["$","meta","13",{"property":"og:type","content":"website"}],["$","meta","14",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","15",{"name":"twitter:title","content":"Travel with Naresh Gadhiya"}],["$","meta","16",{"name":"twitter:description","content":"International Travel & Visa Consultancy · 36+ Years of Travel & Tourism Expertise"}],["$","meta","17",{"name":"twitter:image","content":"https://ankitgadhiya.github.io/travel-with-naresh/images/travel-with-naresh-social.jpg"}],["$","link","18",{"rel":"icon","href":"/travel-with-naresh/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L14","19",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@15","v":null,"s":"$8"}},"a":"$@16","u":"$@17","b":"wJqPE_FIh2r0o7oC9tcmc"}
+e:null
+17:true
+8:300
+8:C
+16:0
+6:"$undefined"
+15:"$undefined"
+f:"$undefined"
