@@ -2,6 +2,8 @@
 
 Production-oriented website and simple mobile CMS for Naresh Gadhiya's independent international travel and visa consultancy.
 
+Public preview: <https://ankitgadhiya.github.io/travel-with-naresh/>
+
 ## Architecture
 
 - Next.js App Router, React, TypeScript and Tailwind CSS
@@ -41,3 +43,5 @@ Direct media uploads accept JPG, PNG, WebP, MP4 and MOV files up to 25 MB. Longe
 5. Attach the domain in Vercel, then apply the DNS records at the registrar.
 
 Before launch, replace the proposed domain if a different name is purchased, add genuine travel media, confirm every career detail with Naresh, and publish testimonials only with customer consent.
+
+The GitHub Pages workflow publishes a static public preview and intentionally excludes `/admin`, because GitHub Pages cannot run the authenticated server-side CMS. The production Vercel deployment includes it.

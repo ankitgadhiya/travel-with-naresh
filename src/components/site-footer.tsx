@@ -24,7 +24,7 @@ export function SiteFooter() {
           <Link href="/faq">Frequently asked questions</Link>
           <Link href="/privacy">Privacy policy</Link>
           <Link href="/terms">Terms & visa disclaimer</Link>
-          <Link href="/admin">Administrator</Link>
+          {process.env.GITHUB_PAGES !== "true" && <Link href="/admin">Administrator</Link>}
         </div>
       </div>
       <div className="shell footer-bottom">

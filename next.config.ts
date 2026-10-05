@@ -1,12 +1,22 @@
 import type { NextConfig } from "next";
 
+const isGitHubPages = process.env.GITHUB_PAGES === "true";
+
 const nextConfig: NextConfig = {
+  ...(isGitHubPages
+    ? {
+        output: "export" as const,
+        basePath: "/travel-with-naresh",
+        assetPrefix: "/travel-with-naresh",
+      }
+    : {}),
   experimental: {
     serverActions: {
       bodySizeLimit: "26mb",
     },
   },
   images: {
+    unoptimized: isGitHubPages,
     remotePatterns: [
       {
         protocol: "https",
