@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { BriefcaseBusiness } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
-import { careerTimeline, site } from "@/lib/site";
+import { assetPath, careerTimeline, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Naresh Gadhiya",
@@ -16,7 +16,7 @@ export default function AboutPage() {
       <PageHero eyebrow="About Naresh" title="More Than 36 Years Around the World" description="A career built through people, places and the practical responsibility of helping travellers feel prepared." />
       <section className="section">
         <div className="shell split">
-          <div className="portrait-frame"><Image src="/images/naresh-gadhiya-portrait.webp" alt="Naresh Gadhiya" width={1000} height={1000} priority /></div>
+          <div className="portrait-frame"><Image src={assetPath("/images/naresh-gadhiya-portrait.webp")} alt="Naresh Gadhiya" width={1000} height={1000} priority /></div>
           <div className="split-copy">
             <p className="eyebrow gold">A personal travel professional</p>
             <h2>Experience earned journey by journey.</h2>

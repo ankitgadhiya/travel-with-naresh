@@ -12,13 +12,15 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://travelwithnareshgadhiya.com",
 };
 
+export function assetPath(path: string) {
+  return `${process.env.GITHUB_PAGES === "true" ? "/travel-with-naresh" : ""}${path}`;
+}
+
 export const navItems = [
   { href: "/about", label: "About Naresh" },
-  { href: "/visa-consultancy", label: "Visa Consultancy" },
-  { href: "/custom-travel-tours", label: "Travel & Tours" },
+  { href: "/visa-consultancy", label: "Visa Services" },
+  { href: "/custom-travel-tours", label: "Custom Holidays" },
   { href: "/destinations", label: "Destinations" },
-  { href: "/travel-stories", label: "Travel Stories" },
-  { href: "/customer-experiences", label: "Experiences" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -39,6 +41,7 @@ export const destinations = [
     slug: "europe",
     name: "Europe",
     eyebrow: "Specialist destination",
+    image: "/images/destinations/europe.webp",
     description:
       "Thoughtfully paced European journeys shaped by extensive first-hand tour-management experience.",
   },
@@ -46,6 +49,7 @@ export const destinations = [
     slug: "usa-canada",
     name: "USA & Canada",
     eyebrow: "North America",
+    image: "/images/destinations/north-america.webp",
     description:
       "Personal planning for family visits, holidays, multi-city itineraries and visa-readiness support.",
   },
@@ -53,6 +57,7 @@ export const destinations = [
     slug: "united-kingdom",
     name: "United Kingdom",
     eyebrow: "Culture & heritage",
+    image: "/images/destinations/united-kingdom.webp",
     description:
       "Personalized UK journeys with practical guidance drawn from international group experience.",
   },
@@ -60,6 +65,7 @@ export const destinations = [
     slug: "australia-new-zealand",
     name: "Australia & New Zealand",
     eyebrow: "Long-haul journeys",
+    image: "/images/destinations/australia-new-zealand.webp",
     description:
       "Balanced itineraries for iconic cities, natural landscapes and comfortable family travel.",
   },
@@ -67,6 +73,7 @@ export const destinations = [
     slug: "middle-east",
     name: "Middle East",
     eyebrow: "Modern & historic",
+    image: "/images/destinations/middle-east.webp",
     description:
       "Tailored city breaks, stopovers and family holidays across diverse Middle Eastern destinations.",
   },
@@ -74,6 +81,7 @@ export const destinations = [
     slug: "far-east-asia",
     name: "Far East & Asia",
     eyebrow: "First-hand insight",
+    image: "/images/destinations/far-east-asia.webp",
     description:
       "Destination guidance informed by professional experience across Thailand, Singapore, Malaysia and China.",
   },
@@ -81,6 +89,7 @@ export const destinations = [
     slug: "south-africa",
     name: "South Africa",
     eyebrow: "Nature & culture",
+    image: "/images/destinations/south-africa.webp",
     description:
       "Personalized journeys combining cities, scenery, wildlife and considered travel pacing.",
   },
@@ -88,6 +97,7 @@ export const destinations = [
     slug: "other-international",
     name: "Other International Destinations",
     eyebrow: "Let us explore",
+    image: "/images/destinations/international.webp",
     description:
       "Start with your interests, dates and budget—then build the right international journey together.",
   },

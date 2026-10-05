@@ -1,13 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Montserrat, Playfair_Display } from "next/font/google";
 import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { site } from "@/lib/site";
+import { assetPath, site } from "@/lib/site";
 import "./globals.css";
+import "./premium.css";
 
-const display = Cormorant_Garamond({ subsets: ["latin"], variable: "--font-display", weight: ["500", "600", "700"] });
-const sans = Manrope({ subsets: ["latin"], variable: "--font-sans" });
+const display = Playfair_Display({ subsets: ["latin"], variable: "--font-display", weight: ["600", "700", "800"] });
+const sans = Montserrat({ subsets: ["latin"], variable: "--font-sans", weight: ["400", "500", "600", "700", "800"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -22,9 +23,9 @@ export const metadata: Metadata = {
     url: site.url,
     siteName: site.name,
     locale: "en_IN",
-    images: [{ url: "/images/travel-with-naresh-social.jpg", width: 1200, height: 671, alt: `${site.name} — ${site.descriptor}` }],
+    images: [{ url: assetPath("/images/travel-with-naresh-social.jpg"), width: 1200, height: 671, alt: `${site.name} — ${site.descriptor}` }],
   },
-  twitter: { card: "summary_large_image", title: site.name, description: `${site.descriptor} · ${site.experience}`, images: ["/images/travel-with-naresh-social.jpg"] },
+  twitter: { card: "summary_large_image", title: site.name, description: `${site.descriptor} · ${site.experience}`, images: [assetPath("/images/travel-with-naresh-social.jpg")] },
 };
 
 export const viewport: Viewport = { themeColor: "#071a33", width: "device-width", initialScale: 1 };
