@@ -17,7 +17,7 @@ export function assetPath(path: string) {
 }
 
 export const navItems = [
-  { href: "/about", label: "About Naresh" },
+  { href: "/about", label: "About Naresh Gadhiya" },
   { href: "/visa-consultancy", label: "Visa Services" },
   { href: "/custom-travel-tours", label: "Custom Holidays" },
   { href: "/destinations", label: "Destinations" },
@@ -44,6 +44,21 @@ export const destinations = [
     image: "/images/destinations/europe.webp",
     description:
       "Thoughtfully paced European journeys shaped by extensive first-hand tour-management experience.",
+    itineraries: [
+      {
+        title: "Classic Europe Highlights",
+        duration: "9 days",
+        route: ["Paris", "Brussels", "Amsterdam", "Cologne", "Black Forest", "Lucerne", "Zurich"],
+      },
+      {
+        title: "Grand Europe Discovery",
+        duration: "14 days",
+        route: ["London", "Paris", "Brussels", "Amsterdam", "Germany", "Switzerland", "Venice", "Florence", "Rome"],
+      },
+    ],
+    visaLinks: [
+      { label: "Official Schengen visa application guidance", href: "https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en" },
+    ],
   },
   {
     slug: "usa-canada",
@@ -52,6 +67,22 @@ export const destinations = [
     image: "/images/destinations/north-america.webp",
     description:
       "Personal planning for family visits, holidays, multi-city itineraries and visa-readiness support.",
+    itineraries: [
+      {
+        title: "East Coast Icons",
+        duration: "10 days",
+        route: ["New York", "Philadelphia", "Washington DC", "Niagara Falls", "Toronto"],
+      },
+      {
+        title: "Canadian Rockies & West Coast",
+        duration: "9 days",
+        route: ["Calgary", "Banff", "Lake Louise", "Jasper", "Vancouver"],
+      },
+    ],
+    visaLinks: [
+      { label: "Official USA visitor visa information", href: "https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html" },
+      { label: "Official Canada visitor visa guidance", href: "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada.html" },
+    ],
   },
   {
     slug: "united-kingdom",
@@ -60,6 +91,17 @@ export const destinations = [
     image: "/images/destinations/united-kingdom.webp",
     description:
       "Personalized UK journeys with practical guidance drawn from international group experience.",
+    itineraries: [
+      {
+        title: "Essential Britain",
+        duration: "8 days",
+        route: ["London", "Oxford", "Stratford-upon-Avon", "Manchester", "Lake District", "Edinburgh"],
+      },
+    ],
+    visaLinks: [
+      { label: "Official UK Standard Visitor visa guidance", href: "https://www.gov.uk/standard-visitor" },
+      { label: "Official UK supporting-document guide", href: "https://www.gov.uk/government/publications/visitor-visa-guide-to-supporting-documents" },
+    ],
   },
   {
     slug: "australia-new-zealand",
@@ -68,6 +110,17 @@ export const destinations = [
     image: "/images/destinations/australia-new-zealand.webp",
     description:
       "Balanced itineraries for iconic cities, natural landscapes and comfortable family travel.",
+    itineraries: [
+      {
+        title: "Australia & New Zealand Essentials",
+        duration: "14 days",
+        route: ["Melbourne", "Sydney", "Gold Coast", "Auckland", "Rotorua", "Queenstown"],
+      },
+    ],
+    visaLinks: [
+      { label: "Official Australia Visitor visa guidance", href: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600" },
+      { label: "Official New Zealand Visitor Visa guidance", href: "https://www.immigration.govt.nz/new-zealand-visas/options/visit/visitor-visa/" },
+    ],
   },
   {
     slug: "middle-east",
@@ -76,6 +129,16 @@ export const destinations = [
     image: "/images/destinations/middle-east.webp",
     description:
       "Tailored city breaks, stopovers and family holidays across diverse Middle Eastern destinations.",
+    itineraries: [
+      {
+        title: "Dubai & Abu Dhabi Family Escape",
+        duration: "6 days",
+        route: ["Dubai", "Desert Safari", "Palm Jumeirah", "Abu Dhabi", "Yas Island"],
+      },
+    ],
+    visaLinks: [
+      { label: "Official UAE tourist visa information", href: "https://u.ae/en/information-and-services/visa-and-emirates-id/tourist-visa" },
+    ],
   },
   {
     slug: "far-east-asia",
@@ -84,6 +147,22 @@ export const destinations = [
     image: "/images/destinations/far-east-asia.webp",
     description:
       "Destination guidance informed by professional experience across Thailand, Singapore, Malaysia and China.",
+    itineraries: [
+      {
+        title: "Singapore, Malaysia & Thailand",
+        duration: "10 days",
+        route: ["Singapore", "Kuala Lumpur", "Genting Highlands", "Bangkok", "Pattaya"],
+      },
+      {
+        title: "Japan Cultural Journey",
+        duration: "9 days",
+        route: ["Tokyo", "Mount Fuji", "Hakone", "Kyoto", "Nara", "Osaka"],
+      },
+    ],
+    visaLinks: [
+      { label: "Official Japan visa information", href: "https://www.mofa.go.jp/j_info/visit/visa/index.html" },
+      { label: "Official Singapore visa information", href: "https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa_requirements" },
+    ],
   },
   {
     slug: "south-africa",
@@ -92,6 +171,16 @@ export const destinations = [
     image: "/images/destinations/south-africa.webp",
     description:
       "Personalized journeys combining cities, scenery, wildlife and considered travel pacing.",
+    itineraries: [
+      {
+        title: "South African Highlights",
+        duration: "10 days",
+        route: ["Cape Town", "Cape Peninsula", "Garden Route", "Johannesburg", "Kruger region"],
+      },
+    ],
+    visaLinks: [
+      { label: "Official South Africa visa information", href: "https://www.dha.gov.za/index.php/immigration-services/types-of-visas" },
+    ],
   },
   {
     slug: "other-international",
@@ -100,7 +189,24 @@ export const destinations = [
     image: "/images/destinations/international.webp",
     description:
       "Start with your interests, dates and budget—then build the right international journey together.",
+    itineraries: [
+      {
+        title: "Built Around Your Wish List",
+        duration: "Flexible",
+        route: ["Choose your region", "Set your pace", "Balance signature sights", "Add personal experiences"],
+      },
+    ],
+    visaLinks: [],
   },
+];
+
+export const visaInformationLinks = [
+  { destination: "Schengen / Europe", href: "https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en" },
+  { destination: "United Kingdom", href: "https://www.gov.uk/standard-visitor" },
+  { destination: "United States", href: "https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html" },
+  { destination: "Canada", href: "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada.html" },
+  { destination: "Australia", href: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600" },
+  { destination: "New Zealand", href: "https://www.immigration.govt.nz/new-zealand-visas/options/visit/visitor-visa/" },
 ];
 
 export const careerTimeline = [
@@ -123,7 +229,7 @@ export const faqs = [
   {
     question: "Can you guarantee that my visa will be approved?",
     answer:
-      "No consultant can guarantee a visa. Decisions are made solely by the respective embassy, consulate or immigration authority. Naresh provides professional guidance, documentation review and application support.",
+      "No consultant can guarantee a visa. Decisions are made solely by the respective embassy, consulate or immigration authority. Naresh Gadhiya provides professional guidance, documentation review and application support.",
   },
   {
     question: "Are your tours fixed group packages?",
@@ -138,11 +244,11 @@ export const faqs = [
   {
     question: "Do you specialize in Europe?",
     answer:
-      "Europe receives special focus because of Naresh's extensive professional experience with European tours and international groups.",
+      "Europe receives special focus because of Naresh Gadhiya's extensive professional experience with European tours and international groups.",
   },
   {
     question: "How do I begin?",
     answer:
-      "Send a WhatsApp message or complete the smart enquiry form. Share your visa country or travel idea, tentative dates and your city, and Naresh can guide the next conversation.",
+      "Send a WhatsApp message or complete the smart enquiry form. Share your visa country or travel idea, tentative dates and your city, and Naresh Gadhiya can guide the next conversation.",
   },
 ];

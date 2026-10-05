@@ -20,7 +20,7 @@ export function SiteFooter() {
         </div>
         <div>
           <h3>Information</h3>
-          <Link href="/about">About Naresh</Link>
+          <Link href="/about">About Naresh Gadhiya</Link>
           <Link href="/faq">Frequently asked questions</Link>
           <Link href="/privacy">Privacy policy</Link>
           <Link href="/terms">Terms & visa disclaimer</Link>

@@ -8,6 +8,7 @@ const enquiryTypes = [
   "Visa Consultancy",
   "Plan an International Holiday",
   "Europe Holiday",
+  "Customize a Sample Itinerary",
   "Group Tour",
   "Flights & Hotels",
   "Personal Travel Consultation",
@@ -30,6 +31,7 @@ export function EnquiryForm() {
       ? [
           ["Country", value(data, "country")],
           ["Visa type", value(data, "visaType")],
+          ["Nationality", value(data, "nationality")],
           ["Applicants", value(data, "applicants")],
           ["Tentative date", value(data, "date")],
           ["Previous refusal", value(data, "refusal")],
@@ -47,8 +49,10 @@ export function EnquiryForm() {
       "Hello Mr. Gadhiya, I found you through your website.",
       "",
       `Enquiry: ${type}`,
+      `Name: ${value(data, "name")}`,
       ...details.filter(([, item]) => item).map(([label, item]) => `${label}: ${item}`),
       `Current city: ${value(data, "city")}`,
+      `Preferred contact time: ${value(data, "contactTime") || "Any suitable time"}`,
       `Message: ${value(data, "message") || "Please contact me to discuss."}`,
     ];
     window.open(whatsappUrl(lines.join("\n")), "_blank", "noopener,noreferrer");
@@ -56,6 +60,8 @@ export function EnquiryForm() {
 
   return (
     <form className="enquiry-form" onSubmit={submit}>
+      <div className="field"><label htmlFor="name">Your full name</label><input id="name" name="name" autoComplete="name" required /></div>
+      <div className="field"><label htmlFor="city">Current city</label><input id="city" name="city" autoComplete="address-level2" required /></div>
       <div className="field full">
         <label htmlFor="enquiryType">How can I help you?</label>
         <select id="enquiryType" value={type} onChange={(event) => setType(event.target.value)}>
@@ -66,6 +72,7 @@ export function EnquiryForm() {
         <>
           <div className="field"><label htmlFor="country">Country</label><input id="country" name="country" required /></div>
           <div className="field"><label htmlFor="visaType">Visa type</label><input id="visaType" name="visaType" placeholder="Tourist, business, family…" /></div>
+          <div className="field"><label htmlFor="nationality">Nationality</label><input id="nationality" name="nationality" required /></div>
           <div className="field"><label htmlFor="applicants">Number of applicants</label><input id="applicants" name="applicants" type="number" min="1" defaultValue="1" /></div>
           <div className="field"><label htmlFor="refusal">Previous refusal</label><select id="refusal" name="refusal"><option>No</option><option>Yes</option></select></div>
         </>
@@ -80,7 +87,7 @@ export function EnquiryForm() {
         </>
       )}
       <div className="field"><label htmlFor="date">Tentative travel date(s)</label><input id="date" name="date" placeholder="Month or dates" /></div>
-      <div className="field"><label htmlFor="city">Current city</label><input id="city" name="city" required /></div>
+      <div className="field"><label htmlFor="contactTime">Preferred contact time</label><input id="contactTime" name="contactTime" placeholder="For example, after 6 PM" /></div>
       <div className="field full"><label htmlFor="message">Special requirements / message</label><textarea id="message" name="message" rows={4} /></div>
       <div className="form-actions full">
         <button className="button button-gold" type="submit"><MessageCircle size={18} /> Send via WhatsApp</button>

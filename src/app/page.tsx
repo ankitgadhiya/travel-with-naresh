@@ -6,6 +6,8 @@ import {
   CalendarCheck2,
   Compass,
   FileCheck2,
+  FileText,
+  Globe2,
   Headphones,
   Mail,
   Map,
@@ -22,13 +24,13 @@ import { assetPath, destinations, site, whatsappMessages, whatsappUrl } from "@/
 const benefits = [
   [Compass, "First-hand perspective", "Recommendations shaped by decades of international tour operations and traveller care."],
   [Route, "Built around you", "Journeys designed for your interests, pace, dates, comfort and budget—not a generic template."],
-  [Headphones, "One expert throughout", "Speak directly with Naresh from the first idea through your pre-travel preparation."],
+  [Headphones, "One expert throughout", "Speak directly with Naresh Gadhiya from the first idea through your pre-travel preparation."],
   [Users, "Every kind of traveller", "Thoughtful planning for couples, families, groups, seniors and first-time international travellers."],
 ];
 
 const planningSteps = [
   [MessageCircle, "01", "Start with a conversation", "Share your destination, visa need, travel dates or even just the kind of holiday you imagine."],
-  [Sparkles, "02", "Receive a personal plan", "Naresh brings the route, documentation, pacing and practical details into one clear direction."],
+  [Sparkles, "02", "Receive a personal plan", "Naresh Gadhiya brings the route, documentation, pacing and practical details into one clear direction."],
   [PlaneTakeoff, "03", "Travel prepared", "Move forward with one-to-one guidance, careful checks and someone experienced to call."],
 ];
 
@@ -48,14 +50,14 @@ export default function Home() {
         <div className="shell hero-grid">
           <div className="hero-copy">
             <p className="hero-kicker"><BadgeCheck size={18} /> 36+ years of travel expertise</p>
-            <h1>Your world.<br /><span>Personally planned.</span></h1>
-            <p className="hero-tagline">International holidays and end-to-end visa guidance, personally handled by Naresh Gadhiya.</p>
+            <h1>Travel with clarity.<br /><span>Journey with confidence.</span></h1>
+            <p className="hero-tagline">End-to-end visa consultancy and international holidays, personally guided by Naresh Gadhiya.</p>
             <div className="button-row hero-actions">
               <a className="button button-coral" href={whatsappUrl(whatsappMessages.general)} target="_blank" rel="noreferrer">
                 <MessageCircle size={19} /> Plan on WhatsApp
               </a>
               <a className="button button-glass" href={`mailto:${site.email}`}>
-                <Mail size={18} /> Email Naresh
+                <Mail size={18} /> Email Naresh Gadhiya
               </a>
             </div>
             <div className="hero-assurance">
@@ -64,24 +66,18 @@ export default function Home() {
               <span><Map size={17} /> Across India</span>
             </div>
           </div>
-          <div className="hero-profile">
-            <div className="hero-profile-image">
-              <Image
-                src={assetPath("/images/naresh-gadhiya-portrait.webp")}
-                alt="Naresh Gadhiya, international travel and visa consultant"
-                width={1000}
-                height={1000}
-                priority
-                sizes="(max-width: 900px) 82vw, 36vw"
-              />
-            </div>
-            <div className="hero-profile-caption">
-              <span>Your travel professional</span>
-              <strong>Naresh Gadhiya</strong>
-              <small>Navi Mumbai · Available across India</small>
-            </div>
-            <div className="experience-seal"><strong>36+</strong><span>Years</span></div>
-          </div>
+          <aside className="hero-visa-card">
+            <div className="hero-visa-icon"><FileText /></div>
+            <p className="eyebrow">Visa consultancy spotlight</p>
+            <h2>Prepare every detail before you apply.</h2>
+            <ul>
+              <li><FileCheck2 size={18} /> Personalized document checklist</li>
+              <li><ShieldCheck size={18} /> Application and supporting-document review</li>
+              <li><MessageCircle size={18} /> Interview guidance where applicable</li>
+            </ul>
+            <Link className="button button-coral" href="/visa-consultancy">Explore visa guidance <ArrowRight size={18} /></Link>
+            <small>Visa approval is decided only by the relevant government authority; no outcome can be guaranteed.</small>
+          </aside>
         </div>
         <div className="hero-scroll">Explore the journey <ArrowRight size={16} /></div>
       </section>
@@ -149,13 +145,13 @@ export default function Home() {
           <div className="about-home-copy">
             <p className="eyebrow">Meet your travel professional</p>
             <h2>Experience is the difference between a booking and a well-planned journey.</h2>
-            <p className="lead">Since 1990, Naresh&apos;s career has crossed international tour management, group travel, customer service, destination consulting, business development and visa support.</p>
-            <p>Today, that depth becomes something personal: direct advice from the professional who listens, plans and remains available throughout your journey.</p>
+            <p className="lead">Since 1990, Naresh Gadhiya&apos;s career has crossed international tour management, group travel, customer service, destination consulting, business development and visa support.</p>
+            <p>Today, that depth becomes something personal: direct advice, an extensive worldwide professional network built over decades, and a consultant who remains available throughout your journey.</p>
             <div className="about-signature">
               <strong>Naresh Gadhiya</strong>
               <span>Independent Travel & Visa Consultant</span>
             </div>
-            <Link className="text-link" href="/about">Discover Naresh&apos;s journey <ArrowRight size={18} /></Link>
+            <Link className="text-link" href="/about">Discover Naresh Gadhiya&apos;s journey <ArrowRight size={18} /></Link>
           </div>
         </div>
       </section>
@@ -219,7 +215,8 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <div className="center-link"><Link href="/why-travel-with-naresh">Why travel with Naresh <ArrowRight size={17} /></Link></div>
+          <div className="network-note"><Globe2 /><div><strong>Worldwide connections, with thoughtful meal support.</strong><p>Naresh Gadhiya can draw on a broad international network developed over decades. Indian and Jain meal planning, including destination kitchen or chef coordination, may be arranged in select popular destinations subject to availability and local supplier confirmation.</p></div></div>
+          <div className="center-link"><Link href="/why-travel-with-naresh">Why travel with Naresh Gadhiya <ArrowRight size={17} /></Link></div>
         </div>
       </section>
 
@@ -227,7 +224,7 @@ export default function Home() {
         <div className="shell enquiry-layout">
           <div className="enquiry-intro">
             <p className="eyebrow">Your journey starts here</p>
-            <h2>Tell Naresh what you have in mind.</h2>
+            <h2>Tell Naresh Gadhiya what you have in mind.</h2>
             <p>Share a few practical details and the website will prepare a structured WhatsApp message. Nothing is stored.</p>
             <div className="direct-contact-card">
               <span>Prefer to speak directly?</span>

@@ -206,7 +206,7 @@ h3 { font-size: clamp(1.45rem, 2.2vw, 2rem); }
 .hero-copy h1 {
   max-width: 770px;
   color: white;
-  font-size: clamp(4rem, 7.3vw, 7.7rem);
+  font-size: clamp(3.6rem, 6vw, 6.4rem);
   letter-spacing: -.055em;
 }
 .hero-copy h1 span { color: var(--gold-light); font-style: italic; }
@@ -242,6 +242,27 @@ h3 { font-size: clamp(1.45rem, 2.2vw, 2rem); }
   box-shadow: 0 28px 80px rgba(0, 0, 0, .28);
   backdrop-filter: blur(8px);
 }
+.hero-visa-card {
+  position: relative;
+  align-self: center;
+  max-width: 470px;
+  margin-left: auto;
+  padding: clamp(32px, 4vw, 52px);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 28px;
+  background: rgba(7, 88, 104, .72);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, .28);
+  backdrop-filter: blur(15px);
+}
+.hero-visa-icon { display: grid; width: 58px; height: 58px; margin-bottom: 27px; place-items: center; color: var(--navy); border-radius: 18px; background: var(--sun); }
+.hero-visa-card .eyebrow { color: var(--gold-light); }
+.hero-visa-card h2 { color: white; font-size: clamp(2.1rem, 3.2vw, 3.2rem); }
+.hero-visa-card ul { display: grid; gap: 14px; margin: 28px 0; padding: 0; list-style: none; }
+.hero-visa-card li { display: flex; align-items: flex-start; gap: 10px; color: rgba(255, 255, 255, .86); font-size: .78rem; font-weight: 600; }
+.hero-visa-card li svg { flex: 0 0 auto; margin-top: 3px; color: var(--gold-light); }
+.hero-visa-card .button { width: 100%; }
+.hero-visa-card small { display: block; margin-top: 18px; color: rgba(255, 255, 255, .58); font-size: .6rem; line-height: 1.6; }
 .hero-profile-image { overflow: hidden; border-radius: 205px 205px 15px 15px; }
 .hero-profile-image img {
   display: block;
@@ -425,6 +446,10 @@ h3 { font-size: clamp(1.45rem, 2.2vw, 2rem); }
 .benefit::before { display: block; width: 44px; height: 3px; margin-bottom: 29px; content: ""; background: var(--coral); }
 .benefit svg { margin-bottom: 24px; color: var(--ocean); }
 .benefit p { font-size: .82rem; line-height: 1.65; }
+.network-note { display: flex; max-width: 920px; align-items: flex-start; gap: 19px; margin: 42px auto 0; padding: 25px 28px; border: 1px solid rgba(8, 126, 139, .2); border-radius: 18px; background: var(--mist); }
+.network-note > svg { flex: 0 0 auto; color: var(--ocean); }
+.network-note strong { color: var(--navy); }
+.network-note p { margin-top: 5px; color: var(--muted); font-size: .78rem; }
 
 /* Enquiry and quick contact */
 .enquiry-section { color: white; background: linear-gradient(135deg, var(--ocean-deep), var(--navy)); }
@@ -476,6 +501,25 @@ h3 { font-size: clamp(1.45rem, 2.2vw, 2rem); }
 .faq-list summary { font-family: var(--font-sans), Arial, sans-serif; font-size: 1.15rem; }
 .empty-state { border-radius: 18px; background: white; }
 .story-card, .testimonial-card { border-radius: 18px; box-shadow: var(--shadow-soft); }
+.itinerary-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.itinerary-card { padding: 34px; border: 1px solid var(--line); border-radius: 20px; background: white; box-shadow: var(--shadow-soft); }
+.itinerary-top { display: flex; align-items: center; justify-content: space-between; color: var(--ocean-deep); }
+.itinerary-top span { padding: 6px 11px; border-radius: 999px; background: var(--mist); font-size: .68rem; font-weight: 800; }
+.itinerary-card h3 { margin-top: 20px; }
+.itinerary-card ol { display: grid; gap: 0; margin: 25px 0; padding: 0; list-style: none; }
+.itinerary-card li { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .78rem; }
+.itinerary-card li span { display: grid; flex: 0 0 auto; width: 25px; height: 25px; place-items: center; color: white; border-radius: 50%; background: var(--ocean); font-size: .62rem; font-weight: 800; }
+.itinerary-card > a { display: inline-flex; align-items: center; gap: 8px; color: var(--coral-dark); font-size: .75rem; font-weight: 800; }
+.visa-link-section { background: white; }
+.visa-link-layout { display: grid; grid-template-columns: 1.05fr .95fr; align-items: start; gap: clamp(40px, 7vw, 90px); }
+.visa-link-layout > div > p:not(.eyebrow) { margin-top: 20px; color: var(--muted); }
+.official-link-card { display: grid; gap: 12px; padding: 30px; border-radius: 20px; background: var(--navy); box-shadow: var(--shadow); }
+.official-link-card > a:not(.button) { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding-bottom: 12px; color: white; border-bottom: 1px solid rgba(255, 255, 255, .14); font-size: .75rem; font-weight: 700; }
+.official-link-card > p { color: rgba(255, 255, 255, .72); font-size: .8rem; }
+.official-link-card .button { margin-top: 8px; }
+.visa-resource-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; margin-bottom: 30px; }
+.visa-resource-grid a { display: flex; min-height: 86px; align-items: center; justify-content: space-between; gap: 15px; padding: 20px; color: var(--navy); border: 1px solid var(--line); border-radius: 14px; background: white; font-size: .76rem; font-weight: 800; box-shadow: 0 8px 25px rgba(10, 39, 64, .05); }
+.visa-resource-grid a:hover { color: var(--coral-dark); border-color: var(--coral); transform: translateY(-2px); }
 
 /* Footer and contact dock */
 .site-footer { padding-top: 90px; background: #061d31; }
@@ -511,6 +555,7 @@ h3 { font-size: clamp(1.45rem, 2.2vw, 2rem); }
   .mobile-nav { display: block; }
   .hero-grid { grid-template-columns: 1fr .7fr; gap: 38px; }
   .hero-profile { max-width: 350px; }
+  .hero-visa-card { max-width: 430px; }
   .destination-3, .destination-4, .destination-5, .destination-6 { grid-column: span 6; }
 }
 
@@ -520,9 +565,10 @@ h3 { font-size: clamp(1.45rem, 2.2vw, 2rem); }
   .hero-copy { padding: 65px 0 15px; text-align: center; }
   .hero-copy h1, .hero-tagline { margin-inline: auto; }
   .hero-actions, .hero-assurance { justify-content: center; }
-  .hero-profile { width: min(410px, 82vw); margin-inline: auto; }
+  .hero-profile, .hero-visa-card { width: min(560px, 92vw); margin-inline: auto; }
   .hero-scroll { display: none; }
   .service-showcase, .about-home-grid, .enquiry-layout { grid-template-columns: 1fr; }
+  .visa-link-layout { grid-template-columns: 1fr; }
   .about-home-copy { max-width: 720px; }
   .enquiry-intro { position: static; text-align: center; }
   .direct-contact-card { max-width: 460px; margin-inline: auto; text-align: left; }
@@ -540,12 +586,14 @@ h3 { font-size: clamp(1.45rem, 2.2vw, 2rem); }
   .brand { min-width: 0; }
   .brand strong { font-size: 1rem; }
   .brand small { font-size: .47rem; }
-  .hero-copy h1 { font-size: clamp(2.85rem, 13vw, 4.5rem); }
+  .hero-copy h1 { font-size: clamp(2.2rem, 9.3vw, 3rem); letter-spacing: -.04em; }
   .hero-tagline { font-size: .98rem; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero-actions .button { width: 100%; }
   .hero-assurance { gap: 13px; font-size: .6rem; }
   .hero-profile { width: min(360px, 88vw); }
+  .hero-visa-card { width: 100%; padding: 28px 23px; text-align: left; }
+  .hero-visa-card h2 { font-size: 2.2rem; }
   .experience-seal { left: -15px; width: 78px; height: 78px; }
   .trust-bar-inner > div { gap: 8px 22px; }
   .service-showcase { gap: 15px; }
@@ -559,6 +607,8 @@ h3 { font-size: clamp(1.45rem, 2.2vw, 2rem); }
   .destination-grid-featured { display: grid; grid-template-columns: 1fr; grid-auto-rows: 290px; }
   .destination-1, .destination-2, .destination-3, .destination-4, .destination-5, .destination-6 { grid-column: auto; grid-row: auto; }
   .benefit-grid { grid-template-columns: 1fr; }
+  .itinerary-grid, .visa-resource-grid { grid-template-columns: 1fr; }
+  .network-note { padding: 21px; }
   .benefit { min-height: 0; }
   .page-hero { padding: 84px 0 72px; }
   .footer-grid { grid-template-columns: 1fr; }

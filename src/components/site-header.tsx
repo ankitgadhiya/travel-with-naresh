@@ -49,8 +49,8 @@ export function SiteHeader() {
             {navItems.map((item) => (
               <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</Link>
             ))}
-            <a href={`mailto:${site.email}`} onClick={() => setOpen(false)}>Email Naresh</a>
-            <a className="mobile-whatsapp" href={whatsappUrl(whatsappMessages.general)} target="_blank" rel="noreferrer">WhatsApp Naresh</a>
+            <a href={`mailto:${site.email}`} onClick={() => setOpen(false)}>Email Naresh Gadhiya</a>
+            <a className="mobile-whatsapp" href={whatsappUrl(whatsappMessages.general)} target="_blank" rel="noreferrer">WhatsApp Naresh Gadhiya</a>
           </nav>
         )}
       </header>
