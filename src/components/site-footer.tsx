@@ -21,6 +21,8 @@ export function SiteFooter() {
         <div>
           <h3>Information</h3>
           <Link href="/about">About Naresh Gadhiya</Link>
+          <Link href="/travel-stories">Travel stories & gallery</Link>
+          <Link href="/customer-experiences">Customer experiences</Link>
           <Link href="/faq">Frequently asked questions</Link>
           <Link href="/privacy">Privacy policy</Link>
           <Link href="/terms">Terms & visa disclaimer</Link>

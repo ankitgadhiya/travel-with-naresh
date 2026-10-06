@@ -4,6 +4,7 @@ import {
   ArrowRight,
   BadgeCheck,
   CalendarCheck2,
+  Camera,
   Compass,
   FileCheck2,
   FileText,
@@ -11,12 +12,14 @@ import {
   Headphones,
   Mail,
   Map,
+  MessageSquareQuote,
   MessageCircle,
   PlaneTakeoff,
   Route,
   ShieldCheck,
   Sparkles,
   Users,
+  Video,
 } from "lucide-react";
 import { EnquiryForm } from "@/components/enquiry-form";
 import { assetPath, destinations, site, whatsappMessages, whatsappUrl } from "@/lib/site";
@@ -237,6 +240,32 @@ export default function Home() {
           </div>
           <div className="network-note"><Globe2 /><div><strong>Worldwide connections, with thoughtful meal support.</strong><p>Naresh Gadhiya can draw on a broad international network developed over decades. Indian and Jain meal planning, including destination kitchen or chef coordination, may be arranged in select popular destinations subject to availability and local supplier confirmation.</p></div></div>
           <div className="center-link"><Link href="/why-travel-with-naresh">Why travel with Naresh Gadhiya <ArrowRight size={17} /></Link></div>
+        </div>
+      </section>
+
+      <section className="section content-preview-section">
+        <div className="shell">
+          <div className="section-heading centered-wide">
+            <p className="eyebrow">Real journeys, shared responsibly</p>
+            <h2>Travel photographs, videos and customer experiences.</h2>
+            <p>Dedicated spaces are ready for Naresh Gadhiya&apos;s original travel archive and genuine traveller feedback. Content is published only when it is authentic, suitable for public viewing and—in the case of customer feedback—shared with permission.</p>
+          </div>
+          <div className="content-preview-grid">
+            <article className="content-preview-card content-preview-media">
+              <div className="content-preview-icons"><Camera /><Video /></div>
+              <p className="eyebrow">Travel stories & gallery</p>
+              <h3>Pictures, destination memories and video moments.</h3>
+              <p>Explore the public gallery as Naresh Gadhiya&apos;s own photographs, short videos and first-hand travel notes are prepared and added.</p>
+              <Link href="/travel-stories">Visit travel stories <ArrowRight size={18} /></Link>
+            </article>
+            <article className="content-preview-card content-preview-feedback">
+              <div className="content-preview-icons"><MessageSquareQuote /></div>
+              <p className="eyebrow">Customer experiences</p>
+              <h3>Genuine feedback—not invented testimonials.</h3>
+              <p>Written and video experiences will appear only after the traveller has supplied them and consented to public use.</p>
+              <Link href="/customer-experiences">View customer experiences <ArrowRight size={18} /></Link>
+            </article>
+          </div>
         </div>
       </section>
 
