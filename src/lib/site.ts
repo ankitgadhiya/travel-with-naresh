@@ -8,7 +8,7 @@ export const site = {
   phoneDisplay: "+91 98195 44714",
   phone: "919819544714",
   email: "nareshbgadhiya@gmail.com",
-  linkedin: "https://linkedin.com/in/nareshgadhiya",
+  linkedin: "https://www.linkedin.com/in/naresh-gadhiya-79861325/",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://travelwithnaresh.com",
 };
 
