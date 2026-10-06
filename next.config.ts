@@ -1,13 +1,14 @@
 import type { NextConfig } from "next";
 
 const isGitHubPages = process.env.GITHUB_PAGES === "true";
+const isCustomDomain = process.env.CUSTOM_DOMAIN === "true";
+const basePath = isGitHubPages && !isCustomDomain ? "/travel-with-naresh" : "";
 
 const nextConfig: NextConfig = {
   ...(isGitHubPages
     ? {
         output: "export" as const,
-        basePath: "/travel-with-naresh",
-        assetPrefix: "/travel-with-naresh",
+        ...(basePath ? { basePath, assetPrefix: basePath } : {}),
       }
     : {}),
   experimental: {

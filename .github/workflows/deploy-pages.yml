@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages preview
+name: Deploy website
 
 on:
   push:
@@ -29,7 +29,8 @@ jobs:
       - run: npm run build
         env:
           GITHUB_PAGES: "true"
-          NEXT_PUBLIC_SITE_URL: https://ankitgadhiya.github.io/travel-with-naresh
+          CUSTOM_DOMAIN: "true"
+          NEXT_PUBLIC_SITE_URL: https://travelwithnaresh.com
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out

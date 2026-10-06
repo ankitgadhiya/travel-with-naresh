@@ -9,11 +9,16 @@ export const site = {
   phone: "919819544714",
   email: "nareshbgadhiya@gmail.com",
   linkedin: "https://linkedin.com/in/nareshgadhiya",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://travelwithnareshgadhiya.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://travelwithnaresh.com",
 };
 
 export function assetPath(path: string) {
-  return `${process.env.GITHUB_PAGES === "true" ? "/travel-with-naresh" : ""}${path}`;
+  const basePath =
+    process.env.GITHUB_PAGES === "true" && process.env.CUSTOM_DOMAIN !== "true"
+      ? "/travel-with-naresh"
+      : "";
+
+  return `${basePath}${path}`;
 }
 
 export const navItems = [
