@@ -48,6 +48,23 @@ export default function Home() {
         />
         <div className="hero-wash" />
         <div className="shell hero-grid">
+          <aside className="hero-founder" aria-label="Your travel professional">
+            <div className="hero-founder-image">
+              <Image
+                src={assetPath("/images/naresh-gadhiya-portrait.webp")}
+                alt="Naresh Gadhiya, international travel and visa consultant"
+                width={1000}
+                height={1000}
+                priority
+                sizes="(max-width: 900px) 96px, 220px"
+              />
+            </div>
+            <div className="hero-founder-caption">
+              <span>Your travel professional</span>
+              <strong>Naresh Gadhiya</strong>
+              <small>Navi Mumbai · Serving across India</small>
+            </div>
+          </aside>
           <div className="hero-copy">
             <p className="hero-kicker"><BadgeCheck size={18} /> 36+ years of travel expertise</p>
             <h1>Travel with clarity.<br /><span>Journey with confidence.</span></h1>
@@ -60,6 +77,12 @@ export default function Home() {
                 <Mail size={18} /> Email Naresh Gadhiya
               </a>
             </div>
+            <nav className="hero-explore-links" aria-label="Explore services">
+              <span>Explore</span>
+              <Link href="/visa-consultancy">Visa services</Link>
+              <Link href="/custom-travel-tours">Custom holidays</Link>
+              <Link href="/destinations">Destinations</Link>
+            </nav>
             <div className="hero-assurance">
               <span><ShieldCheck size={17} /> Personal guidance</span>
               <span><CalendarCheck2 size={17} /> By appointment</span>
@@ -136,9 +159,6 @@ export default function Home() {
           <div className="about-collage">
             <div className="about-collage-scene">
               <Image src={assetPath("/images/destinations/far-east-asia.webp")} alt="International travel destination" fill sizes="(max-width: 760px) 100vw, 48vw" />
-            </div>
-            <div className="about-collage-portrait">
-              <Image src={assetPath("/images/naresh-gadhiya-portrait.webp")} alt="Naresh Gadhiya" width={1000} height={1000} sizes="(max-width: 760px) 62vw, 23vw" />
             </div>
             <div className="about-collage-note"><Compass /><span><strong>Europe specialist</strong> with worldwide experience</span></div>
           </div>
