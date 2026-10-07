@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BriefcaseBusiness, Mail, MapPin, MessageCircle } from "lucide-react";
 import { site, whatsappMessages, whatsappUrl } from "@/lib/site";
+import { SiteVisitCounter } from "@/components/site-visit-counter";
 
 export function SiteFooter() {
   return (
@@ -32,6 +33,7 @@ export function SiteFooter() {
       <div className="shell footer-bottom">
         <span>© {new Date().getFullYear()} {site.name}</span>
         <span>Serving travellers across India through personalized remote consultation.</span>
+        <SiteVisitCounter />
       </div>
     </footer>
   );

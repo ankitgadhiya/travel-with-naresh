@@ -24,7 +24,7 @@ export default function VisaPage() {
       <PageHero eyebrow="Primary specialist service" title="End-to-End Visa Consultancy" description="Personal guidance from document planning and application review through interview preparation and submission readiness." />
       <section className="section">
         <div className="shell">
-          <div className="section-heading"><p className="eyebrow gold">A considered process</p><h2>Professional support at every practical step.</h2><p>Visa requirements can feel fragmented. Naresh Gadhiya helps you understand the process, organize the right information and approach submission with greater clarity. Every application receives individual attention rather than a generic checklist.</p></div>
+          <div className="section-heading"><p className="eyebrow gold">Experience-led. Detail-focused.</p><h2>Strong applications begin with careful preparation—not promises.</h2><p>Naresh Gadhiya follows a meticulous, case-by-case approach designed to identify documentation gaps early, reduce avoidable errors and help each applicant present a clear, consistent and well-supported application. Every case receives individual attention rather than a generic checklist.</p></div>
           <div className="content-grid">
             {stages.map(([Icon, title, copy]) => <article className="card icon-card" key={String(title)}><Icon /><h3>{String(title)}</h3><p>{String(copy)}</p></article>)}
           </div>

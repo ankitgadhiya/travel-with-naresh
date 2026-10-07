@@ -541,6 +541,10 @@ h3 { font-size: clamp(1.45rem, 2.2vw, 2rem); }
 .site-footer .eyebrow { color: var(--gold-light); }
 .footer-grid { grid-template-columns: 1.45fr 1fr .72fr; }
 .footer-grid a:hover { color: var(--gold-light); }
+.footer-bottom { align-items: center; flex-wrap: wrap; }
+.site-visit-counter { display: flex; min-height: 28px; align-items: center; }
+.site-visit-counter img { display: block; width: auto; height: 28px; border-radius: 4px; }
+.site-visit-counter span { color: #91a0b2; font-size: .68rem; }
 .contact-dock {
   position: fixed;
   z-index: 55;

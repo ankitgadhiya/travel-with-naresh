@@ -10,6 +10,7 @@ Website: <https://travelwithnaresh.com/>
 - Supabase Auth, PostgreSQL and Storage
 - GitHub Pages static deployment with custom domain
 - WhatsApp-first enquiry conversion
+- Privacy-conscious aggregate site-view counter
 
 The detailed sitemap, wireframe, design system, content model, deployment plan and cost model are in [`docs/launch-plan.md`](docs/launch-plan.md).
 
